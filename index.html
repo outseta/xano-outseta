@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sync Xano with Outseta</title>
+
+    <!-- Outseta Configuration -->
+    <script>
+      var o_options = {
+        domain: "snippets.outseta.com",
+        auth: {
+          // Only because I use this testing account
+          // for multiple demos and need to override
+          // the Post Login Url configured in Outseta.
+          authenticationCallbackUrl: window.location.origin,
+          registrationConfirmationUrl: window.location.origin,
+          passwordResetUrl: window.location.origin,
+        },
+      };
+    </script>
+
+    <!-- Include Outseta SDK -->
+    <script src="https://cdn.outseta.com/outseta.min.js"></script>
+
+    <!-- Include Xano SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@xano/js-sdk@latest/dist/xano.min.js"></script>
+
+    <!-- Include the XO (Xano + Outseta) Utility Library -->
+    <script data-log-level="info" src="/dist/main.js"></script>
+
+    <script>
+      // Initialize your Xano client
+      const xanoClient = new XanoClient({
+        apiGroupBaseUrl: "https://x8ki-letl-twmt.n7.xano.io/api:HSeGFdim",
+      });
+
+      xo.syncXanoAuthWithOutseta(xanoClient);
+    </script>
+  </head>
+  <body>
+    <nav>
+      <button
+        data-o-anonymous
+        data-o-auth="1"
+        data-mode="popup"
+        data-widget-mode="register"
+      >
+        Signup
+      </button>
+      <button
+        data-o-anonymous
+        data-o-auth="1"
+        data-mode="popup"
+        data-widget-mode="login"
+      >
+        Login
+      </button>
+      <button
+        data-o-authenticated
+        data-o-auth="1"
+        data-mode="popup"
+        data-widget-mode="login"
+      >
+        Profile
+      </button>
+      <button data-o-logout-link="1">Logout</button>
+    </nav>
+
+    <h1>Sync Xano Auth with Outseta</h1>
+  </body>
+</html>
