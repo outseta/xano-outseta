@@ -7,7 +7,7 @@ A library to synchronize authentication tokens between Xano and Outseta. This li
 To use this library, include it from [jsDelivr](https://www.jsdelivr.com/) in your HTML:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@outseta/xano-outseta@1/xano-outseta.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@outseta/xano-outseta@latest/dist/xano-outseta.js"></script>
 ```
 
 You may also specify a certain version, or version range, using the [jsDelivr version range](https://www.jsdelivr.com/)
@@ -46,7 +46,7 @@ You need to include the Outseta and Xano script in the `head` element of your HT
 After the above dependiencies include the Xano Outseta library script, either in the `head` or `body` element of your HTML file.
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@outseta/xano-outseta@1/xano-outseta.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@outseta/xano-outseta@latest/dist/xano-outseta.js"></script>
 ```
 
 ### Step 2: Initialize and Use the Library
@@ -73,14 +73,14 @@ The log level, exchange endpoint, and namespace can be configured using data att
 
    - Supported values: `silent`, `error`, `warn`, `info`
    - Default: `warn`
-   - Example: `<script src="https://cdn.jsdelivr.net/npm/@outseta/xano-outseta@1/xano-outseta.js" data-log-level="warn"></script>`
+   - Example: `<script src="https://cdn.jsdelivr.net/npm/@outseta/xano-outseta@latest/dist/xano-outseta.js" data-log-level="warn"></script>`
 
 2. **Exchange Endpoint**: Set the `data-exchange-endpoint` attribute to specify the endpoint for exchanging the tokens.
 
    - Default: `/outseta/auth`
-   - Example: `<script src="https://cdn.jsdelivr.net/npm/@outseta/xano-outseta@1/xano-outseta.js" data-exchange-endpoint="/my-xano-exchange-endpoint"></script>`
+   - Example: `<script src="https://cdn.jsdelivr.net/npm/@outseta/xano-outseta@latest/dist/xano-outseta.js" data-exchange-endpoint="/my-xano-exchange-endpoint"></script>`
 
 3. **Namespace**: Control the global namespace by setting the `data-namespace` attribute on the script tag.
 
    - Default: `xo`
-   - Example: `<script src="https://cdn.jsdelivr.net/npm/@outseta/xano-outseta@1/xano-outseta.js" data-namespace="myNamespace"></script>`
+   - Example: `<script src="https://cdn.jsdelivr.net/npm/@outseta/xano-outseta@latest/dist/xano-outseta.js" data-namespace="myNamespace"></script>`
