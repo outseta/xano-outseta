@@ -2,6 +2,10 @@
 
 A library to synchronize authentication tokens between Xano and Outseta. This library listens for authentication events from Outseta and updates the Xano auth token accordingly, ensuring that both services remain in sync.
 
+## ❗❗❗ Warning
+
+This library is in early development and should not be used in production environments. The library is not yet feature complete and breaking changes must be expected.
+
 ## Installation
 
 To use this library, include it from [jsDelivr](https://www.jsdelivr.com/) in your HTML:
@@ -22,7 +26,7 @@ Before using this library, you need to set up both Outseta and Xano for seamless
 
 2. Ensure you have a installed the Outseta Extension in Xano from the Xano Marketplace. The setup creates the necessary endpoints in your Xano workspace to handle the exchange of the Outseta access token for the Xano auth token. Make sure the exchange endpoint path match the path specified in your usage of this library.
 
-### Step 1: Include Dependencies
+### Step 1: Include Prerequisites
 
 You need to include the Outseta and Xano script in the `head` element of your HTML file.
 
@@ -41,15 +45,15 @@ You need to include the Outseta and Xano script in the `head` element of your HT
 <script src="https://cdn.jsdelivr.net/npm/@xano/js-sdk@latest/dist/xano.min.js"></script>
 ```
 
-### Step 2: Include the Library Script
+### Step 2: Include the Xano Outseta script
 
-After the above dependiencies include the Xano Outseta library script, either in the `head` or `body` element of your HTML file.
+After the above dependiencies include the Xano Outseta script, either in the `head` or `body` element of your HTML file.
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/@outseta/xano-outseta@latest/dist/xano-outseta.js"></script>
 ```
 
-### Step 2: Initialize and Use the Library
+### Step 2: Initialize and Use the Xano Outseta script
 
 After including the dependencies and library scripts, initialize the Xano client and call the sync function:
 
