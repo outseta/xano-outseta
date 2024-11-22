@@ -27,10 +27,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@xano/js-sdk@latest/dist/xano.min.js"></script>
 
     <!-- Include the XO (Xano + Outseta) Utility Library -->
-    <script
-      data-log-level="info"
-      src="https://cdn.jsdelivr.net/npm/@outseta/xano-outseta@latest/dist/xano-outseta.js"
-    ></script>
+    <script src="/dist/xano-outseta.js"></script>
 
     <script>
       // Initialize your Xano client
@@ -38,7 +35,22 @@
         apiGroupBaseUrl: "https://x8ki-letl-twmt.n7.xano.io/api:HSeGFdim",
       });
 
-      xo.syncXanoAuthWithOutseta(xanoClient);
+      const xoClient = new XOClient(xanoClient, {
+        logLevel: "info",
+      });
+
+      xoClient.on("token.updated", (tokens) => {
+        console.log("Token Updated", tokens);
+        if (tokens) {
+          document.getElementById("tokens").innerText = JSON.stringify(
+            tokens,
+            null,
+            2
+          );
+        } else {
+          document.getElementById("tokens").innerText = "Tokens cleared";
+        }
+      });
     </script>
   </head>
   <body>
@@ -71,5 +83,7 @@
     </nav>
 
     <h1>Sync Xano Auth with Outseta</h1>
+    <h2>Tokens</h2>
+    <pre id="tokens"></pre>
   </body>
 </html>
