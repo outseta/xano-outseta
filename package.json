@@ -1,19 +1,11 @@
 {
   "name": "@outseta/xano-outseta",
   "author": "@raae (queen.raae.codes)",
-  "type": "module",
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0-alpha.5",
   "files": [
     "dist"
   ],
-  "main": "./dist/main.umd.cjs",
-  "module": "./dist/main.js",
-  "exports": {
-    ".": {
-      "import": "./dist/main.js",
-      "require": "./dist/main.umd.cjs"
-    }
-  },
+  "browser": "./dist/xano-outseta.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

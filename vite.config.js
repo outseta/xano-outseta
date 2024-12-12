@@ -15,7 +15,6 @@ export default defineConfig({
       // Ensure that Outseta is treated as external
       external: ["Outseta"],
       output: {
-        // format: "iife",
         extend: true,
         globals: {
           Outseta: "Outseta",
