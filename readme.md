@@ -6,6 +6,10 @@ A library to synchronize authentication tokens between Xano and Outseta. This li
 
 This library is in early development (alpha) and should not be used in production environments. New feature will be added and breaking changes may occur.
 
+## Stay Updated
+
+Stay updated on all things Xano + Outseta, sign up for the [Xano + Outseta Email List](https://go.outseta.com/email/lists/rQVvjkQ6/subscribe).
+
 ## Quick Start
 
 Copy the below code and paste it in your HTML file. Replace `YOUR_SUBDOMAIN` with your Outseta sub-domain and `YOU_XANO_API_GROUP_BASE_URL` with your Xano API group base URL.
